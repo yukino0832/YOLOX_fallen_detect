@@ -1,0 +1,8 @@
+运行train.py:
+python tools/train.py -f exps/example/custom/yolox_s.py -d 1 -b 16 --fp16 -c yolox_s.pth
+
+使用摄像头实时检测:
+python tools/demo.py webcam -f exps/example/custom/yolox_s.py -c YOLOX_outputs/yolox_s/best_ckpt.pth --conf 0.5 --nms 0.45
+
+传入视频:
+python tools/demo.py video -f exps/example/custom/yolox_s.py -c YOLOX_outputs/yolox_s/best_ckpt.pth --path path_to_your_video.mp4 --conf 0.5 --nms 0.45 --save_result
